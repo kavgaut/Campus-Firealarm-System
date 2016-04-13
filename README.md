@@ -1,2 +1,28 @@
 # Campus-Firealarm-System
 This is a Java application to access and process geometry objects managed in Oracle Database with Oracle Spatial.
+
+In case of an on-campus fire, we need a system to keep track of all the fire hydrants, buildings and the buildings that are on fire. Each fire hydrant is represented as a point and each building is represented as a polygon.
+
+Using this app, we can perform 4 kinds of queries on the buildings, buildings on fire and the fire hydrants:
+1. Whole Region Query
+2. Range Query
+3. Find neighbor Buildings Query and 
+4. Find closest fire hydrants query
+
+Queries:
+--------
+1. Whole Region. This is to display all the features of the active feature types in the whole map. They will be displayed in the following way:
+Color Code for different types of features:
+Feature           Color               Shape
+---------------------------------------------------------------------------
+Buildings         Yellow              Polygon(outline, not solid region )
+Fire Hydrant      Green               Square(15X15 pixels)
+FireBuildings     Red                 Polygon(outline, not solid region)
+
+Graphical representation of Fire Hydrant, Buildings and Building on fire if checked will show up when we click the submit button.
+
+2. Range Query. When this radio button is checked, the user can draw a polygon in the map. After pushing the Submit Query button, only the features of the active feature types that are inside (or intersect with) the polygons are displayed. These features will be displayed in the same way as specified above. The user draws the polygon by clicking the left mouse button to select its vertices sequentially and then clicking the right mouse button to close the polygon. Red line segments on the screen will connect the vertices as they are being selected. When the Range Query radio button is unchecked, the selected polygon will disappear.
+
+3 Find neighbor Buildings. When this radio button is checked, the buildings on fire are displayed as Red polygons. It will also display the neighbor buildings in Yellow polygons. The neighbor buildings are the buildings that are located within 100 pixels. The people in those neighbor buildings also need to be evacuated to safe places.
+
+4 Find Closest Fire Hydrants. When this radio button is checked, the user could use click to specify arbitrary number of buildings that are on fire. The buildings are shown as red polygons and the closest hydrants are displayed as Green Squares. If there are multiple buildings on fire, two buildings on fire might have the same closest fire hydrant. The closest fire hydrants shown on the GUI will provide the firefighter essential information to locate and secure the water sources.
