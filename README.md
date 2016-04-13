@@ -12,14 +12,14 @@ Using this app, we can perform 4 kinds of queries on the buildings, buildings on
 Queries:
 --------
 1. Whole Region. This is to display all the features of the active feature types in the whole map. They will be displayed in the following way:
-Color Code for different types of features:
+Color Code for different types of features is as shown below:
+Graphical representation of Fire Hydrant, Buildings and Building on fire if checked will show up when we click the submit button.
+
 Feature           Color               Shape
 ---------------------------------------------------------------------------
 Buildings         Yellow              Polygon(outline, not solid region )
 Fire Hydrant      Green               Square(15X15 pixels)
 FireBuildings     Red                 Polygon(outline, not solid region)
-
-Graphical representation of Fire Hydrant, Buildings and Building on fire if checked will show up when we click the submit button.
 
 2. Range Query. When this radio button is checked, the user can draw a polygon in the map. After pushing the Submit Query button, only the features of the active feature types that are inside (or intersect with) the polygons are displayed. These features will be displayed in the same way as specified above. The user draws the polygon by clicking the left mouse button to select its vertices sequentially and then clicking the right mouse button to close the polygon. Red line segments on the screen will connect the vertices as they are being selected. When the Range Query radio button is unchecked, the selected polygon will disappear.
 
